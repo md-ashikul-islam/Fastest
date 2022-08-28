@@ -1,0 +1,108 @@
+Tangail:
+
+Router>enable
+Router#
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface FastEthernet0/0
+Router(config-if)#ip address 192.168.24.1 255.255.254.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+
+Narshingdi:
+
+Router>enable
+Router#
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface FastEthernet0/0
+Router(config-if)#ip address 192.168.27.129 255.255.255.0
+Router(config-if)#ip address 192.168.27.129 255.255.255.192
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+
+Router(config)#ip route 192.168.16.0 255.255.248.0 192.168.27.213
+Router(config)#ip route 192.168.27.0 255.255.255.128 192.168.27.213
+
+Munshiganj:
+
+Router>enable
+Router#
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface FastEthernet0/0
+Router(config-if)#ip address 192.168.27.1 255.255.255.0
+Router(config-if)#ip address 192.168.27.1 255.255.255.128
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+Router(config)#ip route 192.168.27.0 255.255.255.128 192.168.27.209
+Router(config)#ip route 192.168.27.128 255.255.255.192 192.168.27.214
+
+Gazipur:
+
+Router>enable
+Router#
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface FastEthernet0/0
+Router(config-if)#ip address 192.168.26.1 255.255.255.0
+Router(config-if)#ip address 192.168.26.1 255.255.255.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+
+Manikganj:
+Router>enable
+Router#
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface FastEthernet0/0
+Router(config-if)#ip address 192.168.27.1 255.255.255.0
+Router(config-if)#ip address 192.168.27.1 255.255.255.128
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+
+Router(config)#ip route 192.168.0.0 255.255.240.0 192.168.27.205
+Router(config)#ip route 192.168.27.128 255.255.255.192 192.168.227.210
+Router(config)#ip route 192.168.16.0 255.255.248.0 192.168.27.210
+
+
+Dhaka:
+
+Router>enable
+Router#
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface FastEthernet0/0
+Router(config-if)#ip address 192.168.0.1 255.255.255.0
+Router(config-if)#ip address 192.168.0.1 255.255.240.0
+Router(config-if)#no shutdown
+Router(config-if)#
+%LINK-5-CHANGED: Interface FastEthernet0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to up
+
+Router(config)#router rip
+Router(config-router)#
+Router(config-router)#end
+Router#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#interface Serial0/0/0
+Router(config-if)#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Router(config)#ip route 192.168.27.128 255.255.255.192 192.168.27.214
